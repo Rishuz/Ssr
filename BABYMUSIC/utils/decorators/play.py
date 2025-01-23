@@ -25,7 +25,6 @@ from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
 
 links = {}
-clinks = {}
 
 
 def PlayWrapper(command):
@@ -128,7 +127,7 @@ def PlayWrapper(command):
                     return await message.reply_text(
                         _["call_2"].format(
                             app.mention, userbot.id, userbot.name, userbot.username
-                        ), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text= "๏ 𝗨ɴʙᴀɴ 𝗔ssɪsᴛᴀɴᴛ ๏", callback_data=f"unban_assistant")]])
+                        )
                     )
             except UserNotParticipant:
                 if chat_id in links:
@@ -212,19 +211,16 @@ def CPlayWrapper(command):
                 ]
             )
             return await message.reply_text(_["general_3"], reply_markup=upl)
-
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
                     text=f"{i.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_CHAT}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
                     disable_web_page_preview=True,
                 )
-
         try:
             await message.delete()
         except:
             pass
-
         audio_telegram = (
             (message.reply_to_message.audio or message.reply_to_message.voice)
             if message.reply_to_message
@@ -281,7 +277,6 @@ def CPlayWrapper(command):
             fplay = True
         else:
             fplay = None
-
         if not await is_active_chat(chat_id):
             userbot = await get_assistant(chat_id)
             try:
@@ -317,7 +312,6 @@ def CPlayWrapper(command):
                             await message.reply_text(
                                 _["call_3"].format(i.mention, type(e).__name__)
                             )
-
                 if invitelink.startswith("https://t.me/+"):
                     invitelink = invitelink.replace(
                         "https://t.me/+", "https://t.me/joinchat/"
@@ -341,14 +335,11 @@ def CPlayWrapper(command):
                     await message.reply_text(
                         _["call_3"].format(i.mention, type(e).__name__)
                     )
-
                 clinks[chat_id] = invitelink
-
                 try:
                     await userbot.resolve_peer(chat_id)
                 except:
                     pass
-
         return await command(
             client,
             message,
@@ -360,5 +351,4 @@ def CPlayWrapper(command):
             url,
             fplay,
         )
-
     return wrapper
