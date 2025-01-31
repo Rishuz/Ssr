@@ -84,15 +84,12 @@ def first_page(_):
                     text=_["H_B_11"], callback_data="help_callback hb11"
                 ),
                 InlineKeyboardButton(
-                    text=_["H_B_13"], callback_data="help_callback hb13"
-                ),
-                InlineKeyboardButton(
                     text=_["H_B_6"], callback_data="help_callback hb6"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=_["H_B_12"], callback_data="help_callback hb12"
+                    text=_["H_B_13"], callback_data="help_callback hb13"
                 ),
                 InlineKeyboardButton(
                     text=_["H_B_10"], callback_data="help_callback hb10"
