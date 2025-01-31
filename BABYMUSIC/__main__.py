@@ -47,12 +47,12 @@ async def init():
     await BABY.decorators()
     await restart_bots()
     LOGGER("BABYMUSIC").info(
-        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗣𝗿𝗼𝗕𝗼𝘁𝘀☠︎︎\n╚═════ஜ۩۞۩ஜ════╝"
+        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗥𝗜𝗦𝗛𝗨☠︎︎\n╚═════ஜ۩۞۩ஜ════╝"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("BABYMUSIC").info("𝗦𝗧𝗢𝗣 𝗣𝗿𝗼𝗕𝗼𝘁 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..")
+    LOGGER("BABYMUSIC").info("𝗦𝗧𝗢𝗣 𝗥𝗜𝗦𝗛𝗨 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..")
 
 
 if __name__ == "__main__":
