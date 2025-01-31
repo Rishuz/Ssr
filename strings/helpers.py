@@ -159,7 +159,9 @@ HELP_15 = """
 
 # New Clone Bot
 CLONE_HELP = """
-<b><u>Clone from :</b></u>
+<b><u>⌯ ᴄʟσηє ʏσυꝛ ʙσᴛ ⌯</b></u>
 
-Give Bot Token After /clone Command From @Botfather.
+⌯ ϻᴧᴋє ʏσυꝛ ʙσᴛ ⌯
+
+⌯ Ғσꝛϻ ᴛʜɪs ʙσᴛ @υꝛϻυsɪᴄꝚσʙσᴛ ⌯
 """
