@@ -6,7 +6,7 @@ from BABYMUSIC import app
 
 #--------------------------
 
-MUST_JOIN = "SANATANI_TECH"
+MUST_JOIN = "vip_robotz"
 #------------------------
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(app: Client, msg: Message):
